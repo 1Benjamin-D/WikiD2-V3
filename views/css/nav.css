@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+}
+/* début barre de navigation */
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+#nav {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  background-color: rgb(218, 213, 203);
+  border: 2px solid orangered;
+  position: fixed;
+  z-index: 10000;
+}
+
+#nav > img {
+  width: 5%;
+  height: 2%;
+}
+
+nav {
+  font-size: 0;
+  width: 100%;
+}
+
+nav > ul > li {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 15px;
+  margin-left: 2%;
+}
+
+nav > ul > li > a {
+  color: black;
+  display: block;
+  padding: 25px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+nav > ul > li:hover > a {
+  color: black;
+  border-bottom: 3px solid orangered;
+}
+
+.mega-menu {
+  background: rgb(218, 213, 203);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: absolute;
+  z-index: 100;
+}
+
+.mega-menu h3 {
+  color: black;
+}
+
+.mega-menu .item {
+  margin: 0 10px;
+  z-index: 100;
+}
+
+.mega-menu a {
+  border-bottom: 1px solid orangered;
+  display: block;
+  padding: 10px 0;
+}
+
+.dropdown:hover .mega-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mega-menu2 {
+  background: rgb(218, 213, 203);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: absolute;
+  z-index: 100;
+  margin-left: 91%;
+  margin-top: -19%;
+}
+.dropdown2:hover .mega-menu2 {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  z-index: 100;
+}
+
+/* fin barre de navigation */
+
+#footer_general {
+  margin-top: 4%;
+  padding-top: 2%;
+  background-color: black;
+}
+#footerT {
+  background-color: black;
+  font-size: 50%;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+#footerF {
+  display: flex;
+  justify-content: center;
+}
+#footerL {
+  width: 50%;
+  background-color: rgb(29, 30, 33);
+}
+#footerL > img {
+  padding-left: 25%;
+  width: 50%;
+}
+#footerL > a {
+  padding-left: 35%;
+  font-size: 150%;
+  color: grey;
+  text-decoration: none;
+}
+#footerL > a:hover {
+  color: white;
+}
+#footerR {
+  width: 50%;
+  background-color: rgb(28, 28, 28);
+}
+#footerR > img {
+  width: 100%;
+}
+#link {
+  display: flex;
+  justify-content: space-around;
+}
+#studio > h2 {
+  color: white;
+}
+#studio > a {
+  color: grey;
+  font-size: 150%;
+  text-decoration: none;
+}
+#studio > a:hover {
+  color: white;
+}
+
+#plateforms > h2 {
+  color: white;
+}
+#plateforms > a {
+  color: grey;
+  font-size: 150%;
+  text-decoration: none;
+}
+#plateforms > a:hover {
+  color: white;
+}
+#plateforms > p {
+  color: rgb(28, 28, 28);
+  opacity: 0;
+  text-decoration: none;
+}
+#footerL > p {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  #nav > img {
+    width: 10%;
+    height: 4%;
+  }
+
+  nav > ul > li {
+    font-size: 10px;
+    padding: 0 5px;
+    margin-left: 1%;
+  }
+
+  nav > ul > li > a {
+    padding: 10px 0;
+  }
+
+  .mega-menu {
+    margin-left: -20%;
+    margin-top: 0%;
+  }
+
+  .mega-menu2 {
+    margin-left: 83%;
+    margin-top: -19%;
+  }
+
+  #footer_general {
+    padding-top: 1%;
+  }
+  #footerL {
+    width: 100%;
+  }
+  #footerL > img {
+    padding-left: 10%;
+    width: 30%;
+  }
+
+  #footerL > a {
+    padding-left: 15%;
+    font-size: 100%;
+  }
+
+  #footerR {
+    display: none;
+  }
+}
